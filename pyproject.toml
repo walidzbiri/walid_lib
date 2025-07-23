@@ -1,6 +1,6 @@
 [project]
 name = "walid-lib"
-version = "1.0.2-rc.1" # Do not change manually !!
+version = "1.0.2-rc.2+d60ea39" # Do not change manually !!
 description = "Python package to test semver and conventionnal commits"
 readme = "README.md"
 authors = [

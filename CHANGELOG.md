@@ -2,6 +2,17 @@
 
 <!-- version list -->
 
+## v1.0.2-rc.2+d60ea39 (2025-07-23)
+
+### Bug Fixes
+
+- Build_metadata typo
+  ([`d60ea39`](https://github.com/walidzbiri/walid_lib/commit/d60ea3996ae5d243d5977c253db174a1a2f61e49))
+
+- Build_metadata typo
+  ([`e4fc7c9`](https://github.com/walidzbiri/walid_lib/commit/e4fc7c9432c667decbc65ff0d0bc600013e23f83))
+
+
 ## v1.0.2-rc.1 (2025-07-23)
 
 ### Bug Fixes
