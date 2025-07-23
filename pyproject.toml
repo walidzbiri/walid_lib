@@ -1,6 +1,6 @@
 [project]
 name = "walid-lib"
-version = "0.0.0"
+version = "1.0.0"
 description = "Python package to test semver and conventionnal commits"
 readme = "README.md"
 authors = [
@@ -29,7 +29,7 @@ build = ["uv ~= 0.7.18"]
 
 [tool.semantic_release]
 version_toml=[
-    "pyproject.toml:version"
+    "pyproject.toml:project.version:nf"
 ]
 build_command = """
     python -m pip install -e '.[build]'
