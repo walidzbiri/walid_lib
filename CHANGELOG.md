@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.2-rc.3 (2025-07-23)
+
+### Bug Fixes
+
+- Cannot publish versions with commit hash to pypi
+  ([`c92754e`](https://github.com/walidzbiri/walid_lib/commit/c92754e42874afd24610a30ec250b8e82de2f6d0))
+
+
 ## v1.0.2-rc.2+d60ea39 (2025-07-23)
 
 ### Bug Fixes

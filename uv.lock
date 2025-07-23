@@ -449,7 +449,7 @@ wheels = [
 
 [[package]]
 name = "walid-lib"
-version = "1.0.2rc2+d60ea39"
+version = "1.0.2rc3"
 source = { editable = "." }
 dependencies = [
     { name = "requests" },
