@@ -3,7 +3,7 @@ name: Continuous Delivery
 on:
   push:
     branches:
-      - main
+      - "**"
 
 # default: least privileged permissions across all jobs
 permissions:
@@ -78,6 +78,15 @@ jobs:
 
           printf '%s\n' "Verified upstream branch has not changed, continuing with release..."
 
+      # - name: Set build metadata
+      #   id: metadata
+      #   run: |
+      #     if [ "${{ github.ref_name }}" != "main" ]; then
+      #       echo "value=${GITHUB_SHA:0:7}" >> $GITHUB_OUTPUT
+      #     else
+      #       echo "value=" >> $GITHUB_OUTPUT
+      #     fi
+
       - name: Action | Semantic Version Release
         id: release
         # Adjust tag with desired version if applicable.
@@ -86,6 +95,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"
+          # build_metadata: ${{ steps.metadata.outputs.value }}
+          # Append commit hash name to version when working on other branch than main
 
       - name: Publish | Upload to GitHub Release Assets
         uses: python-semantic-release/publish-action@v10.2.0
@@ -96,6 +107,7 @@ jobs:
 
       - name: Upload | Distribution Artifacts
         uses: actions/upload-artifact@v4
+        if: steps.release.outputs.released == 'true'
         with:
           name: distribution-artifacts
           path: dist
