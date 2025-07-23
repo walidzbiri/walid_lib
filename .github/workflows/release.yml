@@ -86,7 +86,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"
-          build-metadata: ${{ github.ref_name != 'main' && github.ref_name || '' }}
+          build_metadata: ${{ github.ref_name != 'main' && github.ref_name || '' }}
           # Append branch name to version when working on other branch than main
 
       - name: Publish | Upload to GitHub Release Assets
@@ -98,6 +98,7 @@ jobs:
 
       - name: Upload | Distribution Artifacts
         uses: actions/upload-artifact@v4
+        if: steps.release.outputs.released == 'true'
         with:
           name: distribution-artifacts
           path: dist
