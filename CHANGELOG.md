@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v1.0.2 (2025-07-23)
+
+### Bug Fixes
+
+- Build_metadata typo ([#1](https://github.com/walidzbiri/walid_lib/pull/1),
+  [`7a68b93`](https://github.com/walidzbiri/walid_lib/commit/7a68b930b1e1ef242945c72dadfd140e342942bf))
+
+- Cannot publish versions with commit hash to pypi
+  ([#1](https://github.com/walidzbiri/walid_lib/pull/1),
+  [`7a68b93`](https://github.com/walidzbiri/walid_lib/commit/7a68b930b1e1ef242945c72dadfd140e342942bf))
+
+- Support releasing rc versions ([#1](https://github.com/walidzbiri/walid_lib/pull/1),
+  [`7a68b93`](https://github.com/walidzbiri/walid_lib/commit/7a68b930b1e1ef242945c72dadfd140e342942bf))
+
+- Support releasing rc versions on other branches than main
+  ([#1](https://github.com/walidzbiri/walid_lib/pull/1),
+  [`7a68b93`](https://github.com/walidzbiri/walid_lib/commit/7a68b930b1e1ef242945c72dadfd140e342942bf))
+
+
 ## v1.0.2-rc.3 (2025-07-23)
 
 ### Bug Fixes
