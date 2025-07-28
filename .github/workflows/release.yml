@@ -1,10 +1,6 @@
-name: Continuous Delivery
+name: Release final version
 
 on:
-  workflow_run:
-    workflows: ["Pull request workflow"]
-    types:
-      - completed
   push:
     branches: [ main]
 
