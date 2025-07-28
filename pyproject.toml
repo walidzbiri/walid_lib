@@ -48,13 +48,6 @@ build_command = """
 match = "(main|master)"
 prerelease = false
 
-
-[tool.semantic_release.branches.others]
-match = ".+"
-prerelease = true
-prerelease_token = "rc"
-
-
 [tool.ruff.lint]
 select = [
     "E",  # pycodestyle errors
