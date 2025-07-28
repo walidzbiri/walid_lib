@@ -20,7 +20,12 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "mypy>=1.17.0",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
     "python-semantic-release>=10.2.0",
+    "ruff>=0.12.5",
+    "types-requests>=2.32.4.20250611",
 ]
 
 [project.optional-dependencies]
@@ -48,3 +53,25 @@ prerelease = false
 match = ".+"
 prerelease = true
 prerelease_token = "rc"
+
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191",  # indentation contains tabs
+]
+
+[tool.ruff.lint.pyupgrade]
+# Preserve types, even if a file imports `from __future__ import annotations`.
+keep-runtime-typing = true
